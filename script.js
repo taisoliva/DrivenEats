@@ -111,6 +111,10 @@ function enviarPedido(){
 
     texto = "Olá, gostaria de fazer o pedido: \n - Prato:" +  Salgado + "\n - Bebida: " + Bebida + "\n - Sobremesa: " + Doce + "\n Total: R$" + total;
 
+    texto = window.encodeURIComponent(texto);
+
+    window.open(" https://wa.me/5524981494288?text=" + texto);
+
     console.log(texto);
 
     
