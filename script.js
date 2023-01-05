@@ -114,9 +114,6 @@ function enviarPedido(){
     texto = window.encodeURIComponent(texto);
 
     window.open(" https://wa.me/5524981494288?text=" + texto);
-
-    console.log(texto);
-
     
 }
 
