@@ -261,6 +261,39 @@
         </section>
 
         <!-- fim da seção de bebida -->
+
+        <!--Caixa de confirmação-->
+
+        <div class="confirmacao escondido">
+            <h3> Confirme seu Pedido </h3>
+            <div class="dadoSalgado">
+                <p> Salgado</p>
+                <p> precoSalgado </p>
+            </div>
+           
+            <div class="dadoBebida">
+                <p> bebida </p>
+                <p> preço da bebida </p>
+            </div>
+
+            <div class="dadoDoce">
+                <p> doce </p>
+                <p> preço do doce </p>
+            </div>
+
+            <div class="dadoTotal">
+                <p> Total </p>
+                <p> R$ <span> </span> </p>
+            </div>
+
+            <button class="tudoCerto" onclick="enviarPedido()">
+                Tudo Certo, pode pedir! 
+             </button>
+
+             <button class="Cancelar" onclick="cancelarPedido()">
+                Cancelar
+             </button>
+        </div>
     </main>
 
     <footer>
@@ -268,7 +301,7 @@
             <p> Selecione os 3 itens para fechar o pedido </p>
         </button>
     
-        <button class="selecionar escondido" onclick="enviarPedido()">
+        <button class="selecionar escondido" onclick="conferePedido()">
             <p>  Fechar Pedido </p> 
         </button>
         

@@ -2,7 +2,14 @@ let controleDeSalgado = false;
 let controleDeBebida = false;
 let controleDeDoce = false;
 
+let Salgado = null;
+let Bebida = null;
+let Doce = null;
+let total = 0;
 
+let valorSalgado = null;
+let valorBebida = null;
+let valorDoce = null;
 
 
 function Selecionar(produtoEscolhido){
@@ -91,9 +98,52 @@ function SelecionarDoce(produtoEscolhido){
     }
 }
 
+function conferePedido(){
+    
+    Salgado = document.querySelector(".selecionadoSalgado h2").innerHTML;
+    Bebida = document.querySelector(".selecionadoBebida h2").innerHTML;
+    Doce = document.querySelector(".selecionadoDoce h2").innerHTML;
+
+    let valorSalgado = document.querySelector(".selecionadoSalgado span").innerHTML;
+    let valorBebida = document.querySelector(".selecionadoBebida span").innerHTML;
+    let valorDoce = document.querySelector(".selecionadoDoce span").innerHTML;
+
+    valorSalgado = valorSalgado.replace(",",".");
+    valorBebida = valorBebida.replace(",",".");
+    valorDoce = valorDoce.replace(",",".");
+    
+
+    total = (Number(valorBebida) + Number(valorDoce) + Number(valorSalgado)).toFixed(2);
+
+    valorSalgado = valorSalgado.replace(".",",");
+    valorBebida = valorBebida.replace(".",",");
+    valorDoce = valorDoce.replace(".",",");
+    total = total.replace(".",",");
+
+    const mudaSalgado = document.querySelector(".dadoSalgado p:nth-child(1)").innerHTML = Salgado;
+    const mudaBebida = document.querySelector(".dadoBebida p:nth-child(1)").innerHTML = Bebida;
+    const mudaDoce = document.querySelector(".dadoDoce p:nth-child(1)").innerHTML = Doce;
+
+    const mudaSalgadoPreco = document.querySelector(".dadoSalgado p:nth-child(2)").innerHTML = valorSalgado;
+    const mudaBebidaPreco = document.querySelector(".dadoBebida p:nth-child(2)").innerHTML = valorBebida;
+    const mudaDocePreco = document.querySelector(".dadoDoce p:nth-child(2)").innerHTML = valorDoce;
+
+    
+    const mudaTotal = document.querySelector(".dadoTotal span").innerHTML = total ;
+
+    document.querySelector(".confirmacao").classList.remove("escondido");
+
+
+}
+
 function enviarPedido(){
 
-    const Salgado = document.querySelector(".selecionadoSalgado h2").innerHTML;
+    const usuario = prompt("Digite seu nome:");
+    const endereco = prompt("Digite seu endereço:");
+
+    console.log(usuario + endereco);
+
+    /*const Salgado = document.querySelector(".selecionadoSalgado h2").innerHTML;
     const Bebida = document.querySelector(".selecionadoBebida h2").innerHTML;
     const Doce = document.querySelector(".selecionadoDoce h2").innerHTML;
 
@@ -106,10 +156,10 @@ function enviarPedido(){
     valorDoce = valorDoce.replace(",",".");
     
 
-    const total = (Number(valorBebida) + Number(valorDoce) + Number(valorSalgado)).toFixed(2);
+    const total = (Number(valorBebida) + Number(valorDoce) + Number(valorSalgado)).toFixed(2);*/
     
 
-    texto = "Olá, gostaria de fazer o pedido: \n - Prato:" +  Salgado + "\n - Bebida: " + Bebida + "\n - Sobremesa: " + Doce + "\n Total: R$" + total;
+    texto = "Olá, gostaria de fazer o pedido: \n - Prato:" +  Salgado + "\n - Bebida: " + Bebida + "\n - Sobremesa: " + Doce + "\n Total: R$" + total + "\n Nome: " + usuario + "\n Endereço:" + endereco;
 
     texto = window.encodeURIComponent(texto);
 
@@ -117,3 +167,6 @@ function enviarPedido(){
     
 }
 
+function cancelarPedido(){
+    document.querySelector(".confirmacao").classList.add("escondido");
+}

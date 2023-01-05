@@ -2,8 +2,6 @@
     box-sizing: border-box;
 }
 
-
-
 header{
     background-color: #CF2B2B;
     height: 92px;
@@ -199,10 +197,6 @@ a{
     color: #FFFFFF;
 }
 
-.escondido{
-    display:none;
-}
-
 .selecionadoSalgado{
    border: 5px solid #32B72F;
 }
@@ -241,5 +235,94 @@ a{
 
 .desativar ion-icon{
     display: none;
+}
+
+.confirmacao{
+    position: fixed;
+
+    width:377px;
+    height: 353px;
+
+    top:50%;
+    left:50%;
+    z-index: 1;
+
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.confirmacao h3{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    
+    color: #FFFFFF;
+    font-weight: 700;
+
+}
+
+.confirmacao p {
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 26px;
+    
+    
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.dadoTotal p,
+.dadoTotal span{
+    font-weight: 700;
+}
+
+.confirmacao div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.confirmacao button{
+    width: 329px;
+    height: 52px;
+
+    border-radius: 100px;
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 26px;
+    text-align: center;
+}
+
+.tudoCerto{
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    color: #50D074;
+    font-size: 22px;
+}
+
+.Cancelar{
+    background-color: #50D074;
+    color:#FFFFFF;
+    border: none;
+    font-size: 20px;
+}
+
+.escondido{
+    display:none;
 }
 
