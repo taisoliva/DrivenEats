@@ -82,7 +82,7 @@ function SelecionarDoce(produtoEscolhido){
         console.log("Fechou pedido");
         botaoIniciar = document.querySelector(".iniciar");
         console.log(botaoIniciar);
-        
+
         botaoIniciar = document.querySelector(".iniciar");
         botaoSelecao = document.querySelector(".selecionar");
 
@@ -91,4 +91,7 @@ function SelecionarDoce(produtoEscolhido){
     }
 }
 
+function enviarPedido(){
+    console.log("oi botão te vi");
+}
 
