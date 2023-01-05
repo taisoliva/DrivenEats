@@ -194,6 +194,11 @@ footer button {
 
 }
 
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .escondido{
     display:none;
 }
