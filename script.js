@@ -92,6 +92,27 @@ function SelecionarDoce(produtoEscolhido){
 }
 
 function enviarPedido(){
-    console.log("oi botão te vi");
+
+    const Salgado = document.querySelector(".selecionadoSalgado h2").innerHTML;
+    const Bebida = document.querySelector(".selecionadoBebida h2").innerHTML;
+    const Doce = document.querySelector(".selecionadoDoce h2").innerHTML;
+
+    let valorSalgado = document.querySelector(".selecionadoSalgado span").innerHTML;
+    let valorBebida = document.querySelector(".selecionadoBebida span").innerHTML;
+    let valorDoce = document.querySelector(".selecionadoDoce span").innerHTML;
+
+    valorSalgado = valorSalgado.replace(",",".");
+    valorBebida = valorBebida.replace(",",".");
+    valorDoce = valorDoce.replace(",",".");
+    
+
+    const total = (Number(valorBebida) + Number(valorDoce) + Number(valorSalgado)).toFixed(2);
+    
+
+    texto = "Olá, gostaria de fazer o pedido: \n - Prato:" +  Salgado + "\n - Bebida: " + Bebida + "\n - Sobremesa: " + Doce + "\n Total: R$" + total;
+
+    console.log(texto);
+
+    
 }
 
