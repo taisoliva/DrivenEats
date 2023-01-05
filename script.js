@@ -29,7 +29,7 @@ function Selecionar(produtoEscolhido){
     controleDeSalgado = true;
 
     if(controleDeSalgado && controleDeBebida && controleDeDoce){
-        console.log("Fechou pedido");
+        
         botaoIniciar = document.querySelector(".iniciar");
         botaoSelecao = document.querySelector(".selecionar");
 
@@ -40,7 +40,7 @@ function Selecionar(produtoEscolhido){
 
 function SelecionarBebida(produtoEscolhido){
 
-    console.log(controleDeSalgado);
+    
     
     const produtoEscolhidoAnteriormente = document.querySelector(".selecionadoBebida");
 
@@ -57,9 +57,8 @@ function SelecionarBebida(produtoEscolhido){
     controleDeBebida = true;
 
     if(controleDeSalgado && controleDeBebida && controleDeDoce){
-        console.log("Fechou pedido");
+        
         botaoIniciar = document.querySelector(".iniciar");
-        console.log(botaoIniciar);
         botaoIniciar = document.querySelector(".iniciar");
         botaoSelecao = document.querySelector(".selecionar");
 
@@ -86,9 +85,9 @@ function SelecionarDoce(produtoEscolhido){
     controleDeDoce = true;
 
     if(controleDeSalgado && controleDeBebida && controleDeDoce){
-        console.log("Fechou pedido");
+      
         botaoIniciar = document.querySelector(".iniciar");
-        console.log(botaoIniciar);
+       
 
         botaoIniciar = document.querySelector(".iniciar");
         botaoSelecao = document.querySelector(".selecionar");
@@ -118,7 +117,7 @@ function conferePedido(){
     valorSalgado = valorSalgado.replace(".",",");
     valorBebida = valorBebida.replace(".",",");
     valorDoce = valorDoce.replace(".",",");
-    total = total.replace(".",",");
+    total = total.replace(".",",")
 
     const mudaSalgado = document.querySelector(".dadoSalgado p:nth-child(1)").innerHTML = Salgado;
     const mudaBebida = document.querySelector(".dadoBebida p:nth-child(1)").innerHTML = Bebida;
@@ -141,7 +140,7 @@ function enviarPedido(){
     const usuario = prompt("Digite seu nome:");
     const endereco = prompt("Digite seu endereço:");
 
-    console.log(usuario + endereco);
+   
 
     /*const Salgado = document.querySelector(".selecionadoSalgado h2").innerHTML;
     const Bebida = document.querySelector(".selecionadoBebida h2").innerHTML;
@@ -163,7 +162,7 @@ function enviarPedido(){
 
     texto = window.encodeURIComponent(texto);
 
-    window.open(" https://wa.me/5524981494288?text=" + texto);
+    /*window.open(" https://wa.me/5524981494288?text=" + texto);*/
     
 }
 
