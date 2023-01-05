@@ -132,6 +132,8 @@ function conferePedido(){
 
     document.querySelector(".confirmacao").classList.remove("escondido");
 
+    document.querySelector("main").classList.add("opacidade");
+
 
 }
 
@@ -162,10 +164,11 @@ function enviarPedido(){
 
     texto = window.encodeURIComponent(texto);
 
-    /*window.open(" https://wa.me/5524981494288?text=" + texto);*/
+    window.open(" https://wa.me/5524981494288?text=" + texto);
     
 }
 
 function cancelarPedido(){
     document.querySelector(".confirmacao").classList.add("escondido");
+    document.querySelector("main").classList.remove("opacidade");
 }

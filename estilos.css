@@ -41,12 +41,11 @@ header h2{
 }
 
 main{
-    background-color: #E5E5E5;;
+    background-color: #E5E5E5;
     width: 100%;
     padding-top: 139px;
 
     margin-bottom: 120px;
-    
 }
 
 main h1{
@@ -326,5 +325,9 @@ a{
 
 .escondido{
     display:none;
+}
+
+.opacidade{
+    opacity: 0.2;
 }
 
