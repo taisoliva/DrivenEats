@@ -167,8 +167,6 @@ footer p{
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
-    
-    text-align: justify;
 
     color: #FFFFFF;
 
@@ -177,12 +175,26 @@ footer p{
 
 }
 
-footer button{
+footer button {
    
     width: 364px;
     height: 61px;
     background-color:  #CBCBCB;
     border-radius: 50px;
+}
+
+.iniciar{
+    text-align: justify;
+}
+
+.selecionar{
+    background-color: #32B72F;
+    text-align: center;
+
+}
+
+.escondido{
+    display:none;
 }
 
 .selecionadoSalgado{
