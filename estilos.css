@@ -257,10 +257,9 @@ a{
     display: flex;
     flex-direction: column;
 
-    justify-content: space-around;
-    align-items: center;
-
-    padding: 10px;
+    gap: 13px;
+    padding: 20px;
+    
 }
 
 .confirmacao h3{
