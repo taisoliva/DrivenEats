@@ -159,7 +159,7 @@ function enviarPedido(){
     const total = (Number(valorBebida) + Number(valorDoce) + Number(valorSalgado)).toFixed(2);*/
     
 
-    texto = "Olá, gostaria de fazer o pedido: \n - Prato:" +  Salgado + "\n - Bebida: " + Bebida + "\n - Sobremesa: " + Doce + "\n Total: R$" + total + "\n Nome: " + usuario + "\n Endereço:" + endereco;
+    texto = "Olá, gostaria de fazer o pedido: \n - Prato:" +  Salgado + "\n - Bebida: " + Bebida + "\n - Sobremesa: " + Doce + "\n Total: R$" + total + "\n\n\n Nome: " + usuario + "\n Endereço:" + endereco;
 
     texto = window.encodeURIComponent(texto);
 
