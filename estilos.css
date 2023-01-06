@@ -188,9 +188,11 @@ footer button {
 .selecionar{
     background-color: #32B72F;
     text-align: center;
-
 }
 
+.selecionar p{
+    font-weight: 700;
+}
 a{
     text-decoration: none;
     color: #FFFFFF;
@@ -241,7 +243,7 @@ a{
 
     width:377px;
     height: 353px;
-
+    
     top:50%;
     left:50%;
     z-index: 1;

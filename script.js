@@ -12,7 +12,7 @@ let valorBebida = null;
 let valorDoce = null;
 
 
-function Selecionar(produtoEscolhido){
+function Selecionar(produto){
     
     const produtoEscolhidoAnteriormente = document.querySelector(".selecionadoSalgado");
 
@@ -21,8 +21,7 @@ function Selecionar(produtoEscolhido){
         produtoEscolhidoAnteriormente.classList.remove("selecionadoSalgado");
         produtoEscolhidoAnteriormente.classList.add("desativar");
     }
-
-    const produto = document.querySelector(produtoEscolhido)
+    
     produto.classList.add("selecionadoSalgado");
     produto.classList.remove("desativar");
 
@@ -38,7 +37,7 @@ function Selecionar(produtoEscolhido){
     }
 }
 
-function SelecionarBebida(produtoEscolhido){
+function SelecionarBebida(produto){
 
     
     
@@ -50,7 +49,6 @@ function SelecionarBebida(produtoEscolhido){
         produtoEscolhidoAnteriormente.classList.add("desativar");
     }
 
-    const produto = document.querySelector(produtoEscolhido)
     produto.classList.add("selecionadoBebida");
     produto.classList.remove("desativar");
 
@@ -67,7 +65,7 @@ function SelecionarBebida(produtoEscolhido){
     }
 }
 
-function SelecionarDoce(produtoEscolhido){
+function SelecionarDoce(produto){
     
     const produtoEscolhidoAnteriormente = document.querySelector(".selecionadoDoce");
 
@@ -78,7 +76,6 @@ function SelecionarDoce(produtoEscolhido){
         
     }
 
-    const produto = document.querySelector(produtoEscolhido)
     produto.classList.add("selecionadoDoce");
     produto.classList.remove("desativar");
 
@@ -133,6 +130,8 @@ function conferePedido(){
     document.querySelector(".confirmacao").classList.remove("escondido");
 
     document.querySelector("main").classList.add("opacidade");
+    document.querySelector("footer").classList.add("opacidade");
+
 
 
 }
@@ -171,4 +170,6 @@ function enviarPedido(){
 function cancelarPedido(){
     document.querySelector(".confirmacao").classList.add("escondido");
     document.querySelector("main").classList.remove("opacidade");
+    document.querySelector("footer").classList.remove("opacidade");
+
 }
